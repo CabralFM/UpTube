@@ -1,0 +1,254 @@
+
+.recoverpwtkn{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  text-align: center;
+  min-height: 100vh;
+  background-color: black;
+  margin: 0;
+  box-sizing: border-box;
+  //display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.5rem;
+
+
+  .recovercntrtkn{
+    margin: auto;
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #1C1C23;
+    color: white;
+    border-radius: 1.5rem;
+    align-items: center;
+
+    //height: 450px;
+
+
+    .logotkn{
+      margin: 20px 30px 20px 30px;
+
+      img{
+        width: 300px;
+      }
+    }
+
+    .titletkn{
+      margin-bottom: 20px;
+      h2{
+        color: white;
+      }
+    }
+
+    //.credentials{
+      .inputtkn{
+        background-color: black;
+        width: 330px;
+        height: 50px;
+        position: center;
+        border-radius: 0.5rem;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: white;
+        border: white;
+        font-size: 22px;
+
+        .inputtkn > input{
+          flex: 1;
+          height: 40px;
+          border: none;
+          font-size: 18px;
+          padding-left: 10px;
+          background-color: black;
+          color: white;
+
+        }
+
+        .envelope-icon{
+          color: var(--icons-color);
+          width: 50px;
+          height: 15px;
+          position: absolute;
+          right: -8px;
+          top: 14px
+        }
+      }
+    //}
+
+    .recover{
+      .recover-button{
+        background-color: #1D6DEB;
+        width: 330px;
+        height: 50px;
+        position: relative;
+        border-radius: 1.5rem;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        color: white;
+        border: white;
+        font-size: 17px;
+
+        &:hover{
+          background-color: #1D6DEB;
+        }
+      }
+    }
+
+
+    input {
+      outline: none;
+    }
+
+    .formMaster {
+      margin: 80px auto;
+      width: 100%;
+      max-width: 420px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: #1C1C23;
+      color: white;
+      border-radius: 1.5rem;
+      align-items: center;
+    }
+
+    .usernameCntr {
+      width: 330px;
+      height: 50px;
+      background-color: black;
+      position: relative;
+      border-radius: 1rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .usernameCntr input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      font-size: 18px;
+      padding-left: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    .name {
+      width: 330px;
+      height: 50px;
+      background-color: black;
+      position: relative;
+      border-radius: 1rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .name input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      font-size: 18px;
+      padding-left: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    .email {
+      width: 330px;
+      height: 50px;
+      background-color: black;
+      position: relative;
+      border-radius: 1rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .email input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      font-size: 18px;
+      padding-left: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    .password {
+      width: 330px;
+      height: 50px;
+      background-color: black;
+      position: relative;
+      border-radius: 1rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .password input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      font-size: 18px;
+      padding-left: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    .termsNconditions {
+      font-size: 14px;
+      justify-content: space-around;
+    }
+
+    .btnRegister {
+      background-color: #1D6DEB;
+      width: 330px;
+      height: 50px;
+      position: relative;
+      border-radius: 1.5rem;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      color: white;
+      border: white;
+      font-size: 18px;
+    }
+
+    .instructions {
+      font-size: 0.75rem;
+      background: black;
+      color: #fff;
+      padding: 0.15rem;
+      position: relative;
+      left: 335px;
+      top: -60px;
+      width: 330px;
+      height: 50px;
+      border-radius: 1rem;
+    }
+
+    .instructions svg {
+      margin-right: 0.25rem;
+    }
+
+    .offscreen {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .errmsg {
+      background-color: lightpink;
+      color: firebrick;
+      font-weight: bold;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+  }
+}
