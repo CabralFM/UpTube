@@ -1,0 +1,100 @@
+// Variables:
+$bg-color-2: #1C1C24;
+$bg-color-3: #171725;
+$bg-color-4: #1e5cc3;
+$text-color-1: white;
+$text-color-2: #B5B5BE;
+$text-color-3: #92929D;
+$text-color-4: rgb(255, 255, 255);
+$line-color: #292932;
+$border-radius-1: 20px;
+$border-radius-2: 15px;
+$visibility-bg: #811020;
+$visibility-hover-bg: #ff0021;
+$mobile: 600px;
+$tablet: 950px;
+$drop-shadow-color: black;
+
+.studio-page-container {
+  color: $text-color-1;
+  text-align: left;
+  padding: 4.5em 1.5em 2em;
+  margin: 0 0 0 15em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+  h1 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: .75em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  p {
+    font-size: .5em;
+  }
+
+  hr {
+    width: 100%;
+    border: $line-color .5px solid;
+  }
+
+  .edit-icon {
+    background-color: $visibility-bg;
+    padding: .5em;
+    border-radius: 50%;
+    margin-left: .75em;
+    width: .75em;
+    height: .75em;
+
+    &:hover {
+      background-color: $visibility-hover-bg;
+      transform: scale(1.1);
+      transform-origin: center;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+    }
+  }
+
+
+  .title-container {
+    display: flex;
+    //align-items: center;
+    align-items: start;
+    flex-direction: column;
+    .uploadvideo-button{
+      margin: 1rem 0 2.5rem 0;
+      height: 2rem;
+      background-color: $bg-color-4;
+      color: white;
+      cursor: pointer;
+      border: 0;
+      border-radius: 2rem;
+      &:hover {
+        background-color: #024e9a;
+      }
+    }
+  }
+
+
+  .video-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, 20em);
+  }
+
+}
+
+/*************** MOBILE ****************/
+@media only screen and (max-width: $mobile) {
+  .studio-page-container {
+    margin: 0;
+  }
+}
+

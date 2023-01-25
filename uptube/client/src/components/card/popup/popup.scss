@@ -1,0 +1,141 @@
+$bg-color-1: #171725;
+$icon-color: #232336;
+$border-radius: 20px;
+$drop-shadow-color: #1E75FF;
+
+$close-btn-color-1: grey;
+$close-btn-color-2: white;
+
+$level-3: rgba(255, 182, 73, 0.7);
+$level-3-shadow: rgb(249, 68, 2);
+$level-3-hover: rgb(249, 192, 2);
+
+$level-2: rgba(127, 191, 255, 0.7);
+$level-2-shadow: rgb(108, 51, 255);
+$level-2-hover: rgb(63, 199, 255);
+
+$level-1: rgba(255, 169, 134, 0.7);
+$level-1-shadow: rgb(246, 0, 0);
+$level-1-hover: rgb(255, 135, 82);
+
+$locked: rgb(150, 126, 162);
+$locked-shadow: rgb(200, 0, 255);
+$locked-hover: rgb(162, 172, 255);
+
+// TODO:
+$disable: rgb(0, 13, 58);
+$disable-shadow: rgb(0, 27, 107);
+$disable-hover: rgba(181, 216, 241, 1.0);
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  filter: drop-shadow(5px 5px 250px $drop-shadow-color);
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1em;
+  width: 100%;
+  max-width: 640px;
+  background-color: $bg-color-1;
+  border-radius: $border-radius;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+
+  h1 {
+    margin: 0 0 2em;
+  }
+
+  h2 {
+    font-size: .75em;
+    margin: 1em 0 0;
+  }
+
+  h3 {
+    font-weight: lighter;
+    font-size: .75em;
+  }
+
+  .date {
+    color: $drop-shadow-color;
+    margin-top: 2em;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5em;
+  }
+
+  .icon-visibility {
+    color: $drop-shadow-color;
+    margin-top: .5em;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: $close-btn-color-1;
+    font-size: 1.25em;
+
+    :hover {
+      cursor: pointer;
+      transform-origin: center;
+      color: $close-btn-color-2;
+    }
+  }
+
+  .icon-container {
+
+    .icon {
+      display: flex;
+      height: 3.5em;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 7em;
+      botton: 0;
+      margin: auto;
+      color: $icon-color;
+    }
+  }
+
+  .achievement-main-icon {
+    height: 11em;
+  }
+
+  .level-1 {
+    color: $level-1-hover;
+    filter: drop-shadow(0px 0px 10px $level-1-shadow);
+  }
+
+  .level-2 {
+    color: $level-2-hover;
+    filter: drop-shadow(0px 0px 10px $level-2-shadow);
+  }
+
+  .level-3 {
+    color: $level-3-hover;
+    filter: drop-shadow(0px 0px 10px $level-3-shadow);
+  }
+
+  // videopage
+.videocard-popup-report-box {
+  //
+}
+}

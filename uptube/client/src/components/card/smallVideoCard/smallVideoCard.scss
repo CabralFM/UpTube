@@ -1,0 +1,322 @@
+/******* STYLE FOR CARD PLAYLIST/VIDEO *******/
+$bg-color-1: rgb(28, 28, 36);
+$bg-color-2: rgba(28, 28, 36, 0.83);
+$bg-color-3: #1A2336FF;
+$text-color-1: white;
+$text-color-2: #1e5cc3;
+$text-color-3: #74747d;
+$text-color-4: #92929D;
+$line-color: #343438;
+$border-radius-1: 20px;
+$border-radius-2: 3px;
+$table: 950px;
+$bg-popup: #1d3559;
+$popup-color: #1D6DEB;
+
+.card-suggestions-container {
+  margin-bottom: 1em;
+}
+
+.card-container {
+  min-height: 15em;
+}
+
+.card-container, .card-suggestions-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: $border-radius-1;
+  min-width: 20em;
+  background-color: $bg-color-1;
+}
+
+.link-container {
+  display: flex;
+
+  .bg-image-container {
+    width: 20em;
+    height: 10em;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: $border-radius-1;
+    border-top-right-radius: $border-radius-1;
+
+    .duration {
+      font-size: .65em;
+      font-weight: bold;
+      background-color: $bg-color-2;
+      color: white;
+      margin-top: 135px;
+      margin-left: 1em;
+      top: auto;
+      text-align: center;
+      padding: .2em .4em;
+      border-radius: $border-radius-2;
+      display: inline-block;
+    }
+  }
+
+  .image-overlay {
+    display: flex;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.2));
+    width: 5em;
+    height: 10em;
+    border-top-left-radius: $border-radius-1;
+
+    .playlist-icon {
+      color: $text-color-1;
+      margin: auto;
+    }
+
+    .bookmark {
+      height: 3em;
+      filter: drop-shadow(0px 0px 5px black);
+    }
+
+    .play {
+      display: flex;
+      position: absolute;
+      height: 1em;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: -.5em;
+      margin: auto;
+    }
+  }
+}
+
+.avatar-container {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 3em;
+  min-width: 3em;
+  border-radius: 50%;
+  border: solid white 2px;
+  margin: -1.5em 1em 0 auto;
+}
+
+.details-container-main-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.details-container {
+  margin: 1em 1em .75em;
+
+  .channel {
+    color: $text-color-2;
+    font-weight: bold;
+    font-size: .65em;
+    margin: 0;
+  }
+
+  .tags-container, .user-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: $text-color-2;
+    font-weight: bold;
+
+    .tag, .user-name {
+      margin: 0 .5em 0 0;
+      font-size: .65em;
+    }
+  }
+
+  .title {
+    color: $text-color-1;
+    font-size: .8em;
+    margin: .15em 0 0;
+  }
+
+  .info-container {
+    display: flex;
+
+    p {
+      margin: .15em .5em 0 0;
+      color: $text-color-3;
+      font-size: .75em;
+      font-weight: bold;
+    }
+
+    .history-container {
+      span {
+        color: $text-color-2;
+      }
+
+      p {
+        margin-top: .5em;
+      }
+    }
+  }
+}
+
+.details-margin-top {
+  margin-top: -1em;
+}
+
+.playlist-link-container {
+  display: flex;
+
+  .playlist-definitions-icon {
+    display: flex;
+    color: $text-color-4;
+    font-size: 1em;
+
+    :hover {
+      color: $text-color-1;
+    }
+  }
+}
+
+.reactions-main-container {
+  color: $text-color-1;
+  margin-left: 1em;
+  margin-right: 1em;
+
+  .line {
+    background-color: $line-color;
+    height: .5px;
+    width: 100%;
+  }
+
+  .reactions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .comments-container, .likes-container {
+      display: flex;
+      font-size: 1.25em;
+      align-items: center;
+    }
+
+    .icon, .bookmark-icon {
+      color: $text-color-4;
+      height: 15px;
+      margin: 0 .5em;
+    }
+
+    .bookmark-icon {
+
+      &:hover {
+        color: $text-color-1;
+        cursor: pointer;
+      }
+    }
+
+    .popup-container {
+      position: absolute;
+      width: 15em;
+      filter: drop-shadow(0px 0px 5px black);
+      padding: 1.35em;
+      background-color: $bg-popup;
+      color: $text-color-1;
+      margin-left: -3.6em;
+      margin-top: 2em;
+      border-radius: 5px;
+      font-size: .75em;
+      display: none;
+      // Animation
+      transition: all 5.3s ease;
+      opacity: 0;
+      transform: scale(0);
+
+      h4 {
+        margin: 0 0 1em;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 0;
+      }
+
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .25em;
+        margin-bottom: .25em;
+
+        input {
+          justify-content: right;
+          margin-left: .5em;
+        }
+
+        .label-description {
+          font-size: 1em;
+          text-align: left;
+          width: 9em;
+        }
+
+        .playlist-type-container {
+          background-color: $bg-color-3;
+          border: solid $popup-color 1px;
+          border-radius: 5px;
+          padding: .5em;
+        }
+      }
+
+      .popup-button {
+        border: none;
+        display: flex;
+        text-decoration: none;
+        background-color: $bg-color-3;
+        color: $text-color-1;
+        width: 100%;
+        border: solid $popup-color 1px;
+        border-radius: 5px;
+        margin-top: .5em;
+
+        p {
+          font-size: 1em;
+          margin: .75em auto;
+        }
+
+        &:hover {
+          background-color: $text-color-1;
+          color: $bg-color-3;
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .popup-container.visible {
+      display: block;
+      // Animation
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    // Create a triangle shape
+    .popup-container::before {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      border-width: 0 10px 20px 10px;
+      border-color: transparent transparent $bg-popup transparent;
+      margin-left: -4.1em;
+    }
+
+    // Position the triangle element
+    .popup-container::before {
+      top: -20px;
+      left: calc(50% - 10px);
+    }
+  }
+}
+
+/*************** MOBILE ****************/
+@media only screen and (max-width: $table) {
+  .video-page {
+    margin: 0;
+  }
+}

@@ -1,0 +1,30 @@
+/******* USER/CHANNEL PAGE STYLE *******/
+
+// Variables:
+$bg-color: #13131A;
+$text-color: white;
+$mobile: 600px;
+
+.definitions-page-container {
+  background-color: $bg-color;
+  color: $text-color;
+  text-align: left;
+  padding: 4.5em 1.5em 1.5em;
+  margin: 0 0 0 15em;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: .2px;
+
+  h1 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 1em;
+  }
+}
+
+/*************** MOBILE ****************/
+@media only screen and (max-width: $mobile) {
+  .definitions-page-container {
+    margin: 0;
+  }
+}
