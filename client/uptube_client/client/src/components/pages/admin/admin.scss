@@ -1,0 +1,127 @@
+// Variables:
+$bg-color: #13131A;
+$text-color: white;
+$mobile: 600px;
+$text-color-1: #1e5cc3;
+$text-color-2: #74747d;
+// Edit button:
+$btn-color-1: #171725;
+$btn-color-4: #1e5cc3;
+$btn-color-3: white;
+$btn-color-2: #92929D;
+$btn-border-radius: 15px;
+
+.admin-page-container {
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 4.5em 1.5em 2em;
+  margin: 0 0 0 15em;
+
+  h1 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 1em;
+  }
+
+  h2 {
+    font-size: .85em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table, th, td {
+    text-align: center;
+    font-size: .85em;
+
+    th {
+      background-color: $text-color;
+      color: $text-color-1;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        padding: .25em;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    td {
+      background-color: $text-color-1;
+      height: 3.5em;
+
+      div {
+        font-weight: lighter;
+        display: flex;
+        padding: .25em;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .td-avatar-container {
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 2.5em;
+        width: 2.5em;
+        border-radius: 50%;
+        border: solid white 2px;
+        margin: auto;
+      }
+    }
+  }
+
+  .admin-report-header {
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    justify-content: space-between;
+
+    .edit-button {
+      position: relative;
+      display: flex;
+      font-size: .5em;
+      background-color: $btn-color-1;
+      width: 16em;
+      border: $btn-color-2 solid 1px;
+      border-radius: $btn-border-radius;
+      padding: .5em;
+      margin-top: -1.25em;
+      margin-left: 1em;
+
+      p, svg {
+        font-size: 1.5em;
+        margin: auto;
+        color: $btn-color-2;
+      }
+
+      &.active, &:hover {
+        cursor: pointer;
+        border: $btn-color-3 solid 1px;
+
+        p, svg {
+          color: $btn-color-3;
+        }
+      }
+
+      &.active {
+        background-color: $btn-color-4;
+      }
+    }
+  }
+}
+
+/*************** MOBILE ****************/
+@media only screen and (max-width: $mobile) {
+  .admin-page-container {
+    margin: 0;
+  }
+}

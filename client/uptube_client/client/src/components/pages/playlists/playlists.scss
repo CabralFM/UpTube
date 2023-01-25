@@ -1,0 +1,38 @@
+/******* PLAYLISTS PAGE STYLE *******/
+
+$bg-color: #13131A;
+$text-color: white;
+$mobile: 600px;
+
+.playlists-page-container {
+  background-color: $bg-color;
+  color: $text-color;
+  text-align: left;
+  padding: 4.5em 1.5em 2em;
+  margin: 0 0 0 15em;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 1em;
+  }
+
+  h1:nth-of-type(2) {
+    margin-top: 1em;
+  }
+
+  .playlist-container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, 20em);
+  }
+}
+
+/*************** MOBILE ****************/
+@media only screen and (max-width: $mobile) {
+  .playlists-page-container {
+    margin: 0;
+  }
+}
