@@ -1,0 +1,2483 @@
+{
+	"info": {
+		"_postman_id": "b86ed930-64d0-4e27-bd11-9bba12793465",
+		"name": "UPtube",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23687399"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "retrieve user x data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user"
+							],
+							"query": [
+								{
+									"key": "id_user",
+									"value": "2",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve user x videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "offset",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/:id_user/uploaded-videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								":id_user",
+								"uploaded-videos"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "id_user",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"delete"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload banner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "",
+									"type": "file",
+									"src": "/Users/Margarida/Desktop/pandavermelho.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/upload-banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"upload-banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user definitions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/definitions/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"definitions",
+								"account"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "video",
+			"item": [
+				{
+					"name": "get video by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/video/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"video",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "0cPilqkHBBw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get videos from user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/videos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"videos"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve user videos data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/uploaded-videos?limit=10&offset=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"uploaded-videos"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "10"
+								}
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get video upload progress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/video/:id_video/upload-progress",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"video",
+								":id_video",
+								"upload-progress"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "19SUkMGGimP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "video search",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "upload video",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "",
+									"type": "file",
+									"src": "/Users/jra/local_dev/UPskill/upskill_M10/video.avi"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5001/video/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"video",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_video",
+									"value": "2246916",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "DEUSA live",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ao vivo na Queima das Fitas",
+									"type": "text"
+								},
+								{
+									"key": "path",
+									"value": "https://www.youtube.com/watch?v=mvPqfS-N3KU",
+									"type": "text"
+								},
+								{
+									"key": "publication_date",
+									"value": "2022-04-05T19:32:39.000Z",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "thumbnail",
+									"value": "teste",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/video/edit/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"video",
+								"edit",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "19SUkMGGimP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/video/delete/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"video",
+								"delete",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "19SUkMGGimP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit/publish video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"value": "blank",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "blank",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "blank",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/video/publish/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"video",
+								"publish",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "19SUkMGGimP"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "retrieve comments from video x",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/comments/all/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"comments",
+								"all",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve comments from user x",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/comments/:id_user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"comments",
+								":id_user",
+								"all"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve all comments from user x in video x",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/comments/:id_user/all-in/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"comments",
+								":id_user",
+								"all-in",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								},
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/comments//del/:id_comment/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"comments",
+								"",
+								"del",
+								":id_comment",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_comment",
+									"value": "199"
+								},
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "comment",
+									"value": "comment de domingo a tarde",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/comments/add/:id_user/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"comments",
+								"add",
+								":id_user",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								},
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reactions",
+			"item": [
+				{
+					"name": "total likes per video id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/reactions/:id_video/likes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"reactions",
+								":id_video",
+								"likes"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total dislikes per video id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/reactions/:id_video/dislikes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"reactions",
+								":id_video",
+								"dislikes"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reaction from user x in video x",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/reactions/:id_user/get-reactions/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"reactions",
+								":id_user",
+								"get-reactions",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								},
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add like to video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "like",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/reactions/add/like/:id_user/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"reactions",
+								"add",
+								"like",
+								":id_user",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								},
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add dislike to video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "type",
+									"value": "like",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/reactions//add/dislike/:id_user/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"reactions",
+								"",
+								"add",
+								"dislike",
+								":id_user",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								},
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tags",
+			"item": [
+				{
+					"name": "add tag to video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tag",
+									"value": "gatosss3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/tags/add/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tags",
+								"add",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tag added by video owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tag",
+									"value": "gatosss3",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/tags/del/:id_video/:id_tag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tags",
+								"del",
+								":id_video",
+								":id_tag"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								},
+								{
+									"key": "id_tag",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve tags from video",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/tags/all-video/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tags",
+								"all-video",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_video",
+									"value": "5674rf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve tags from user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/tags/all-user/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"tags",
+								"all-user",
+								":id_user"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"item": [
+				{
+					"name": "retrieve searches from active user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"search"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store user search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "keyword",
+									"value": "gatos",
+									"type": "default"
+								},
+								{
+									"key": "date",
+									"value": "2022-11-15 17:22:45\n",
+									"type": "default"
+								},
+								{
+									"key": "user_id_user",
+									"value": "1",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/search/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"search",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/video-search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"video-search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "cao",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscription",
+			"item": [
+				{
+					"name": "retrieve user subscribers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/subscribers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"subscribers"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve user subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"subscriptions"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete subscriber from user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/subscriber/:id_subscribed/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"subscriber",
+								":id_subscribed",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id_subscribed",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert subscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/subscriber/:id_subscribed/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"subscriber",
+								":id_subscribed",
+								"insert"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id_subscribed",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "suggestions",
+			"item": [
+				{
+					"name": "channels",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "total",
+									"value": "50",
+									"type": "default"
+								},
+								{
+									"key": "offset",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/suggestedChannels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"suggestedChannels"
+							],
+							"query": [
+								{
+									"key": "id_user",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "videos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "50",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/suggestedVideos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"suggestedVideos"
+							],
+							"query": [
+								{
+									"key": "id_user",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "history",
+			"item": [
+				{
+					"name": "retrieve user x history",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"history"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert user x history",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/:id_user/history/:id_video/insert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id_user",
+								"history",
+								":id_video",
+								"insert"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "2"
+								},
+								{
+									"key": "id_video",
+									"value": "12sdca"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "password",
+			"item": [
+				{
+					"name": "recover password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "pmargarida.rocha@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/recover-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"recover-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "pmargarida.rocha@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "novapassword",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Gepeto123",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "jrochafonso@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Joao123456789!",
+									"type": "default"
+								},
+								{
+									"key": "creation_date",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "marg123",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "pmargarida.rocha@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "default"
+								},
+								{
+									"key": "creation_date",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "session",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/session",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"session"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notification",
+			"item": [
+				{
+					"name": "get all notifications from user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/notification/get-all-from-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notification",
+								"get-all-from-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add notification (sends mail if 1)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id_sender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "id_comment",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "id_video",
+									"value": "gh9ijh",
+									"type": "text"
+								},
+								{
+									"key": "id_playlist",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mail",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/notification/:id_receiver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notification",
+								":id_receiver"
+							],
+							"variable": [
+								{
+									"key": "id_receiver",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert default notifications on register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/notification/add-default-notifications/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notification",
+								"add-default-notifications",
+								":id_user"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add notification type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/notification/add-notification/:id_user/:id_notification_type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"notification",
+								"add-notification",
+								":id_user",
+								":id_notification_type"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								},
+								{
+									"key": "id_notification_type",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "playlist",
+			"item": [
+				{
+					"name": "every playlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playlists from user x",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/all/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								"all",
+								":id_user"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "playlist teste",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "private",
+									"type": "text"
+								},
+								{
+									"key": "total_time",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "created",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "modified",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/playlist/user/:id_user/create-playlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								"user",
+								":id_user",
+								"create-playlist"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "coisas que ninguem viu parte 4",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "coisas esquisitas",
+									"type": "default"
+								},
+								{
+									"key": "type",
+									"value": "public",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/playlist/edit/:id_playlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								"edit",
+								":id_playlist"
+							],
+							"variable": [
+								{
+									"key": "id_playlist",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/delete/:id_playlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								"delete",
+								":id_playlist"
+							],
+							"variable": [
+								{
+									"key": "id_playlist",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add video to playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/:id_playlist/add-video/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								":id_playlist",
+								"add-video",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_playlist",
+									"value": "20"
+								},
+								{
+									"key": "id_video",
+									"value": "jUpgHKFHOhw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete video from playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/:id_playlist/del-video/:id_video",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								":id_playlist",
+								"del-video",
+								":id_video"
+							],
+							"variable": [
+								{
+									"key": "id_playlist",
+									"value": "20"
+								},
+								{
+									"key": "id_video",
+									"value": "jUpgHKFHOhw"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user to playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/:id_playlist/add/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								":id_playlist",
+								"add",
+								":id_user"
+							],
+							"variable": [
+								{
+									"key": "id_playlist",
+									"value": "20"
+								},
+								{
+									"key": "id_user",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user from playlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/playlist/:id_playlist/delete/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"playlist",
+								":id_playlist",
+								"delete",
+								":id_user"
+							],
+							"variable": [
+								{
+									"key": "id_playlist",
+									"value": "20"
+								},
+								{
+									"key": "id_user",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "get reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/report/get/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"report",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "achievements",
+			"item": [
+				{
+					"name": "get achievements from user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/achievements/user/:id_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								"user",
+								":id_user"
+							],
+							"variable": [
+								{
+									"key": "id_user",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add achievement to user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "level",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/achievements/:id_achievement/add-to/:id_user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								":id_achievement",
+								"add-to",
+								":id_user",
+								""
+							],
+							"variable": [
+								{
+									"key": "id_achievement",
+									"value": null
+								},
+								{
+									"key": "id_user",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del achievement from user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/achievements/:id_achieve/delete-from/:id_user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								":id_achieve",
+								"delete-from",
+								":id_user",
+								""
+							],
+							"variable": [
+								{
+									"key": "id_achieve",
+									"value": "3"
+								},
+								{
+									"key": "id_user",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hide achievement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/achievements//hide/:id_achievement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								"",
+								"hide",
+								":id_achievement"
+							],
+							"variable": [
+								{
+									"key": "id_achievement",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disclose achievement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/achievements//disclose/:id_achievement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								"",
+								"disclose",
+								":id_achievement"
+							],
+							"variable": [
+								{
+									"key": "id_achievement",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[admin] get all achievements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/achievements/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[admin] add achievement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "achieve_max_level",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Berserker",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "I live to comment!",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "https://fontawesome.com/icons/trophy?s=thin&f=classic",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/achievements/add/:id_achieve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								"add",
+								":id_achieve"
+							],
+							"variable": [
+								{
+									"key": "id_achieve",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[admin] del achievement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/achievements/delete/:id_achieve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"achievements",
+								"delete",
+								":id_achieve"
+							],
+							"variable": [
+								{
+									"key": "id_achieve",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

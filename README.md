@@ -1,4 +1,4 @@
-![alt text](https://github.com/upskill-frontend-react-2022/uptube-grupo-3-client/blob/main/uptube_logo.png?raw=true) ***CLIENT*** Project
+![alt text](https://github.com/upskill-frontend-react-2022/uptube-grupo-3-client/blob/main/uptube_logo.png?raw=true) ***SERVER*** Project
 
                                              Felício Cabral · João Afonso · Margarida Rocha
 
@@ -11,4 +11,3 @@
 This project is being developed as part of UPskill's evaluation program.
 
 [Planification](https://docs.google.com/spreadsheets/d/1Zt782s3gm8dhiTGAwyuPXapmTP7UguSzy5J7VMvPgmc/edit?usp=sharing) (please request access)
-
